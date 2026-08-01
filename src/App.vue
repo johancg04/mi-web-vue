@@ -1,11 +1,9 @@
 <script setup>
-
+import MyToolbar from './components/MyToolbar.vue'
 </script>
 
 <template>
-  <h1>Iniciando proyecto...</h1>
+  <MyToolbar/>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>
