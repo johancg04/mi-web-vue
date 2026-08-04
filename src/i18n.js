@@ -28,6 +28,10 @@ const messages = {
         universidadDetail: "Universidad",
       },
     },
+    proyectos:{
+      titulo: "Proyectos Destacados",
+      enunciado: "Ejercicios y prototipos donde aplico lo aprendido.",
+    }
   },
   en: {
     nav: {
@@ -56,6 +60,10 @@ const messages = {
         universidadDetail: "University",
       },
     },
+    proyectos:{
+      titulo: "Featured Projects",
+      enunciado: "Exercises and prototypes where I apply what I learn.",
+    }
   },
 };
 

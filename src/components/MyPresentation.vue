@@ -16,7 +16,7 @@
 </script>
 
 <template>
-  <div class="flex justify-center grid grid-flow auto-rows-auto mx-auto gap-4 max-w-5xl">
+  <div class="flex justify-center grid grid-flow auto-rows-auto mx-auto gap-4 max-w-5xl pb-12">
     <img src="../assets/images/banner.png" alt="Profile Image" class=" w-75 h-48 mx-auto mb-4 ml-0 mt-3" />
     <span class="text-green-500 font-mono text-xs text-primary tracking-[0.3em] flex">
         <span class="pi pi-code "></span>
