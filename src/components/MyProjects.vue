@@ -34,8 +34,9 @@
                         <div class="grid grid-cols-3 gap-2 mt-3">
                             <Chip class="px-2.5 py-0.5 justify-center font-normal text-[11px]" :label="tecnologia" v-for="tecnologia in proyecto.tecnologias"/>
                         </div>
-                        <div class="mt-4 font-mono text-xs text-primary">
-                            <span class="text-green-500">Ver repositorio -></span>
+                        <div class="mt-4 text-xs text-primary text-green-500">
+                            <span class="font-mono">Ver repositorio</span>
+                            <span class="ml-1">-></span>
                         </div>
                     </template>
                 </Card>
