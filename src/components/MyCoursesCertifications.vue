@@ -76,7 +76,7 @@
 </script>
 
 <template>
-    <div class="mx-auto max-w-5xl scroll-mt-16 px-6 pb-4">
+    <div class="mx-auto max-w-5xl scroll-mt-16 px-6 pb-12">
         <div class="text-2xl font-semibold tracking-tight sm:text-3xl pb-4 border-t border-border pt-12">
             <span>Cursos y Certificaciones</span>
         </div>
@@ -91,7 +91,11 @@
         <div class="flex flex-wrap justify-center gap-7 mt-5">
             <a v-for="certification in certifications" :href="certification.enlace" target="_blank">
                 <Card style="width: 25rem; overflow: hidden" class="group flex h-full flex-col rounded-xl border border-border bg-card p-5 transition-all hover:-translate-y-0.5 hover:border-primary/50 hover:card-glow">
-                    <template #title>{{ certification.nombre }} - {{ certification.anio }}</template>
+                    <template #title>
+                        <span class="text-xl">
+                            {{ certification.nombre }} - {{ certification.anio }}
+                        </span>
+                    </template>
                     <template #content>
                         <p class="mt-2 text-sm text-muted-foreground">
                             {{ certification.universidad }}
