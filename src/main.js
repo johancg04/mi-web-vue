@@ -11,6 +11,7 @@ import './style.css'
 import Card from 'primevue/card';
 import Chip from 'primevue/chip';
 import Timeline from 'primevue/timeline';
+import Textarea from 'primevue/textarea';
 
 const app = createApp(App);
 
@@ -21,4 +22,5 @@ app.component('Toolbar', Toolbar);
 app.component('Card', Card);
 app.component('Chip', Chip);
 app.component('Timeline', Timeline);
+app.component('Textarea', Textarea);
 app.mount('#app')
