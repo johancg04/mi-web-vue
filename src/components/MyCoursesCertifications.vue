@@ -90,9 +90,9 @@
         </div>
         <div class="flex flex-wrap justify-center gap-7 mt-5">
             <a v-for="certification in certifications" :href="certification.enlace" target="_blank">
-                <Card style="width: 25rem; overflow: hidden" class="group flex h-full flex-col rounded-xl border border-border bg-card p-5 transition-all hover:-translate-y-0.5 hover:border-primary/50 hover:card-glow">
+                <Card style="width: 25rem; overflow: hidden" class="group flex h-full flex-col rounded-xl border border-border bg-card p-4 transition-all hover:-translate-y-0.5 hover:border-green-500 hover:card-glow">
                     <template #title>
-                        <span class="text-xl">
+                        <span class="text-lg">
                             {{ certification.nombre }} - {{ certification.anio }}
                         </span>
                     </template>
@@ -102,7 +102,7 @@
                         </p>
                     </template>
                     <template #footer>
-                        <div class="mt-4 text-xs text-primary text-green-500">
+                        <div class="mt-3 text-xs text-primary text-green-500">
                             <span class="font-mono">Ver certificado</span>
                             <span class="ml-1">-></span>
                         </div>

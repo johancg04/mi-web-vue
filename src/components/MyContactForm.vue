@@ -32,7 +32,7 @@
 </script>
 
 <template>
-    <div class="mx-auto max-w-5xl scroll-mt-16 px-6 pb-4">
+    <div class="mx-auto max-w-5xl scroll-mt-16 px-6 pb-4 mb-15">
         <div class="mb-5">
             <div class="text-2xl font-semibold tracking-tight sm:text-3xl pb-4 border-t border-border pt-12">
                 Contactame
@@ -42,15 +42,15 @@
             </p>
             <div class="flex flex-wrap justify-center gap-7 mt-5">
                 <a v-for="profile in profiles" :href="profile.link" target="_blank">
-                    <Card style="width: 25rem; overflow: hidden" class="group flex h-full flex-col rounded-xl border border-border bg-card p-5 transition-all hover:-translate-y-0.5 hover:border-primary/50 hover:card-glow">
+                    <Card style="width: 25rem; overflow: hidden" class="group flex h-full flex-col rounded-xl border border-border bg-card p-3 transition-all hover:-translate-y-0.5 hover:border-green-500 hover:card-glow">
                         <template #title>
-                            <span class="text-xl">{{ profile.name }}</span>
+                            <span class="text-lg">{{ profile.name }}</span>
                         </template>
                         <template #header>
-                            <span :class="profile.icon" class="text-xl text-primary block pt-4 text-center"></span>
+                            <span :class="profile.icon" class="text-lg text-primary block text-center"></span>
                         </template>
                         <template #content>
-                            <p class="mt-2 text-sm text-muted-foreground">
+                            <p class="mt-2 text-xs text-muted-foreground">
                                 {{ profile.description }}
                             </p>
                         </template>

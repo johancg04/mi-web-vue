@@ -63,11 +63,10 @@ function labelBoton(button) {
   <Toolbar style="padding: 1rem 1rem 1rem 1rem">
     <template #start>
       <div class="hidden sm:inline">
-        <Button
-          icon="pi pi-code"
-          label="Johan.Dev"
-          class="inline-flex items-center gap-2 font-mono text-sm font-semibold text-foreground focus:outline-none focus:ring-0"
-          ></Button>
+        <span class="inline-flex items-center gap-2 font-mono text-sm font-semibold text-foreground">
+          <img src="/johan-dev-logo.png" alt="Johan.Dev" class="h-7 w-auto" />
+          Johan.Dev
+        </span>
       </div>
     </template>
     <template #center>
