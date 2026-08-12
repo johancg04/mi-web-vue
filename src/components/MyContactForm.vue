@@ -85,7 +85,7 @@
                     />
                 </div>
                 <button type="submit"
-                    class="bg-green-500 box-border border border-green-500 hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none inline-flex items-center gap-2 text-white">
+                    class="border-1 border-green-500 text-white bg-green-500 inline-flex items-center justify-center gap-2 font-medium cursor-pointer font-mono rounded-md h-9 px-4 py-2 text-xs">
                     <span class="pi pi-send"></span>
                     Enviar mensaje
                 </button>

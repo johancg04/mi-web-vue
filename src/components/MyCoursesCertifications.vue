@@ -1,4 +1,6 @@
 <script setup>
+    import { ref, computed } from "vue";
+
     const certifications = [
         {
             nombre: 'Python-Fundamentos de Programacion',
@@ -73,6 +75,18 @@
         }
     }
 
+    const filtroActivo = ref("Todas")
+
+    function seleccionar(institucion) {
+        filtroActivo.value = institucion
+    }
+
+    const certificacionesFiltradas = computed(() =>
+        filtroActivo.value === "Todas"
+            ? certifications
+            : certifications.filter(c => c.universidad === filtroActivo.value)
+    )
+
 </script>
 
 <template>
@@ -80,16 +94,29 @@
         <div class="text-2xl font-semibold tracking-tight sm:text-3xl pb-4 border-t border-border pt-12">
             <span>Cursos y Certificaciones</span>
         </div>
-        <div mt-2>
-            <button class="cursor-pointer ml-2">
-                <Chip class="px-3 py-1 justify-center font-normal text-[11px]" label="Todas"/>
+        <div class="mt-2 flex flex-wrap gap-2">
+            <button class="cursor-pointer ml-2" @click="seleccionar('Todas')">
+                <Chip
+                    label="Todas"
+                    class="px-3 py-1 justify-center font-normal text-[11px]"
+                    :class="filtroActivo === 'Todas' ? 'bg-green-500 text-white' : ''"
+                />
             </button>
-            <button class="cursor-pointer ml-2" v-for="institution in institutions">
-                <Chip class="px-3 py-1 justify-center font-normal text-[11px]" :label="institution"/>
+            <button
+                class="cursor-pointer ml-2"
+                v-for="institution in institutions"
+                :key="institution"
+                @click="seleccionar(institution)"
+            >
+                <Chip
+                    :label="institution"
+                    class="px-3 py-1 justify-center font-normal text-[11px]"
+                    :class="filtroActivo === institution ? 'bg-green-500 text-white' : ''"
+                />
             </button>
         </div>
         <div class="flex flex-wrap justify-center gap-7 mt-5">
-            <a v-for="certification in certifications" :href="certification.enlace" target="_blank">
+            <a v-for="certification in certificacionesFiltradas" :key="certification.enlace" :href="certification.enlace" target="_blank">
                 <Card style="width: 25rem; overflow: hidden" class="group flex h-full flex-col rounded-xl border border-border bg-card p-4 transition-all hover:-translate-y-0.5 hover:border-green-500 hover:card-glow">
                     <template #title>
                         <span class="text-lg">
