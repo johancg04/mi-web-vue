@@ -62,7 +62,7 @@ function labelBoton(button) {
 <template>
   <Toolbar style="padding: 1rem 1rem 1rem 1rem">
     <template #start>
-      <div class="hidden sm:inline">
+      <div class="inline-flex">
         <span class="inline-flex items-center gap-2 font-mono text-sm font-semibold text-foreground">
           <img src="/johan-dev-logo.png" alt="Johan.Dev" class="h-7 w-auto" />
           Johan.Dev
@@ -70,7 +70,7 @@ function labelBoton(button) {
       </div>
     </template>
     <template #center>
-      <div class="flex align-items-center gap-2 md:flex">
+      <div class="flex flex-wrap items-center justify-center gap-2">
         <Button
           v-for="button in labelButtonToolbarCenter"
           :key="button.key"
@@ -90,7 +90,7 @@ function labelBoton(button) {
           :label="labelBoton(button)"
           severity="contrast"
           size="small"
-          class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium cursor-pointer transition-colors focus:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 disabled:cursor-not-allowed bg-background shadow-sm hover:bg-accent hover:text-accent-foreground hover:bg-blue-400 hover:text-white h-8 px-3 rounded-full font-mono text-xs"
+          class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium cursor-pointer transition-colors focus:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 disabled:cursor-not-allowed bg-background shadow-sm hover:bg-accent hover:text-accent-foreground hover:bg-blue-400 hover:text-white h-8 px-2 sm:px-3 rounded-full font-mono text-xs"
           @click="button.command && button.command()"
         ></Button>
       </div>
